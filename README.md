@@ -29,3 +29,21 @@ As a user, I want clear messages if something goes wrong so I know if I need to 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 -->
+
+Number and name of feature: 1 Repository Setup
+Estimate of time needed to complete: 30 minutes
+Start time: 9:00
+Finish time: 9:20
+Actual time needed to complete: 20 minutes
+
+Number and name of feature: 2 Locations
+Estimate of time needed to complete: 1.5 hours
+Start time: 9:20
+Finish time: 1:00
+Actual time needed to complete: 3 hours 40 minutes
+
+Number and name of feature: 3 Weather
+Estimate of time needed to complete: 1.5 hours
+Start time: 12:20
+Finish time: 2:00
+Actual time needed to complete: 1 hour 40 minutes
