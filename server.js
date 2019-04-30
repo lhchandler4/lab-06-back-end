@@ -14,3 +14,20 @@ app.get('/lab6', (request, response)=>{
 
 app.listen(PORT,()=> console.log(`Listening on port ${PORT}`));
 
+app.get('/location', (request, response) => {
+  try {
+    let locationData = require('./data/geo.json');
+    response.send(locationData);
+  } catch( error ) {
+    console.log('Sorry, There was an Error');
+    response.status(500).send('Sorry, There was an Error');
+  }
+});
+
+function Place (longName, shortName, types, lat, lng) {
+  this.longName = longName;
+  this.shortName = shortName;
+  this.types = types;
+  this.lat = lat;
+  this.lng = lng;
+}
