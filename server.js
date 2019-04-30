@@ -33,7 +33,7 @@ app.get('/weather', (request, response) => {
     const weatherData = require('./data/darksky.json');
     for(let i=0; i<8; i++){
       let forecast =  weatherData.daily.data[i].summary;
-      let time = weatherData.daily.data[0].time;
+      let time = weatherData.daily.data[i].time;
       new Weather(forecast, time);
     }
     response.status(200).send(weatherArr);
