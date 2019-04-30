@@ -17,17 +17,18 @@ app.listen(PORT,()=> console.log(`Listening on port ${PORT}`));
 app.get('/location', (request, response) => {
   try {
     let locationData = require('./data/geo.json');
-    response.send(locationData);
+    response.send(locationData.results[0].formatted_address);
   } catch( error ) {
     console.log('Sorry, There was an Error');
     response.status(500).send('Sorry, There was an Error');
   }
 });
 
-function Place (longName, shortName, types, lat, lng) {
-  this.longName = longName;
-  this.shortName = shortName;
-  this.types = types;
+function Place (formattedAddress, lat, lng) {
+  this.formattedAddress = formattedAddress;
   this.lat = lat;
   this.lng = lng;
 }
+
+var myLocation = new Place(' ',' ',' ');
+
